@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>Nhập từ cần tìm</div>
+    <input id="value" placeholder="Moi ban nhap vao tu can tim"/>
+    <button onclick="timKiem()">Dịch</button>
+
+
+    <script>
+        let tv = ["vui", "buon", "tuc gian"];
+        let ta = ["glad", "sad", "mad"];
+        function timKiem(){
+            let giatri = document.getElementById("value").value;
+            let check = false;
+            for (let i = 0; i < tv.length; i++) {
+                if (giatri == tv[i]) {
+                    alert("Có tìm thấy");
+                    alert(ta[i]);
+                    check=true;
+                    break;
+                }
+            }
+            if (!check) alert("Khong tim thay");
+        }
+    </script>
+</body>
+</html>
