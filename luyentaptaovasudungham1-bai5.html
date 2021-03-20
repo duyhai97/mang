@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="value" placeholder="Moi ban nhap vao tu can tim"/>
+<button onclick="timkiem()">Kiểm tra</button>
+
+<script>
+
+    function timkiem() {
+        let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let b = ["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+        let giatri = document.getElementById("value").value;
+        let check = false;
+        for (let i = 0; i < a.length; i++) {
+            if (giatri == a[i]) {
+                alert("Có tìm thấy");
+                alert(b[i]);
+                check = true;
+                break;
+            }
+        }
+        if (!check) alert("Khong tim thay");
+    }
+</script>
+</body>
+</html>
